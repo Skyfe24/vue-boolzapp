@@ -3,81 +3,118 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 body{
   height: 100vh;
   background: linear-gradient(to bottom, #009688 20%, #dbdbd3 20%);
 }
 
-.background{
-  width: 1080px;
-  margin: 0 auto;
-  text-align: center;
+.minitext{
+  font-size: smaller;
 }
-.container{
-  width: 1080px;
-  height: 90vh;
-  margin: 0 auto;
-  background-color: rgb(255, 255, 255);
-  text-align: center;
-  color: rgb(0, 0, 0);
+.chatMessaggio {
+  margin: 4px 0;
+  min-width: 100px;
+  border-radius: 8px;
+  padding: 0 15px; 
+  line-height: 40px;
 }
 
-#slider{
-  height: 400px;
-  width: 800px;
+.sentMessaggio {
+  align-self: flex-end;
+  background-color: #d5f9ba;
+}
+.receivedMessaggio {
+  align-self: flex-start;
+  background-color: #fff;
 }
 
-.slide{
-  height: 100%;
-  width: 100%;
-  object-fit:cover;
-  display: none;
+.contacts {
+  background-color: white;
+  width: 40%;
 }
 
-.slide img{
-  height: 100%;
-  width: 100%;
-  object-fit:cover;
-
+.notifiche{
+  background-color: deepskyblue;
 }
 
-.slide.active {
-    display: block;
-  }
-
-
-.flex{
-  width: 50%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  left: 50%;
-  transform: translate(-50%, 0);
+ul {
+  margin-bottom: 0;
+  list-style-type: none;
+  padding-left: 0;
 }
-button{
-  border-radius: 20px;
-  border: 0px;
-  background-color: rgba(0, 0, 0, 0.3);
-  color: white;
-  transition-duration: 1s;
-}
-
-button:hover{
+.contacts li {
   cursor: pointer;
-  background-color: black;
+}
+.searchBar {
+  background-color: #fafafa;
 }
 
-.active{
-  height: 100%;
-  width: 100%;
+.chatSection {
+  background-color: gray;
+  width: 60%;
+
+}
+#app {
+  height: 100vh;
+}
+
+section {
+  height: 90%;
+  margin: auto 0;
+}
+
+.chat {
+  height: calc(100% - 140px);
+  padding: 8px 0;
+  overflow-y: auto;
+}
+
+
+
+nav {
+  height: 70px;
+  background-color: #eaeaea;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+.contactCard {
+  height: 70px;
+  border-top: 1px solid #e9ebeb;
+}
+.contactCard.selected {
+  background-color: #e9ebeb;
+}
+img {
+  height: 55px;
+  border-radius: 50%;
+}
+#profilePic {
+  height: 55px;
+  width: 55px;
   object-fit: cover;
-  display: block;
+  margin-right: 8px;
 }
-.fa-angle-down{
-  font-size: 100px;
+.scrolling {
+  overflow-y: auto;
+  height: calc(100% - 116px);
 }
 
-.fa-angle-up{
-  font-size: 100px;
+i {
+  cursor: pointer;
+  font-size: 1.3rem;
+  margin: 0 3px;
+  padding: 3px;
+  color: #b1b1b1;
+  
 }
+footer i {
+  color: #9da2a3;
+}
+i:hover {
+  color: rgba(31, 29, 29, 0.4);
+}
+
+

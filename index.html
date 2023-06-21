@@ -2,81 +2,120 @@
 <html lang="it">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- FONT AWESOME -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- BOOTSTRAP -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <link rel="stylesheet" href="style.css">
-    <!-- JS -->
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- FONT AWESOME -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+		integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!-- BOOTSTRAP -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+	<!-- VUE -->
+	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+	<link rel="stylesheet" href="style.css">
+	<!-- JS -->
 
-    <title>BoolzApp</title>
+	<title>BoolzApp</title>
 </head>
 
 <body>
-    <div class="background">
-        Lorem 
-        <div id="root" class="">
-            <div class="container row mt-3 mb-3">
-                <!--colonna con i contatti-->
-                <div class="col-4 contacts row-column">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Totam dolorum consequuntur ex quae, et deleniti laudantium sequi ad,
-                    unde odit ab temporibus velit tempora dolores quis eius neque. In, numquam!</div>
-                <!--profilo personale-->
-                <div class="col-8 my-profile row space-b">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Totam dolorum consequuntur ex quae, et deleniti laudantium sequi ad,
-                    unde odit ab temporibus velit tempora dolores quis eius neque. In, numquam!</div>
-
-            </div>
-
-
-
-
-
-
-
-
-
-
-
-
+	<div id="app" class="container d-flex">
+		<!-- 
+             Colonna a sinistra -->
+		<section class="contacts">
+			<!-- Nav -->
+			<nav>
+				<!-- Profilo  -->
+				<div>
+					<img id="profilePic" src="" alt=""> Nome Utente
+				</div>
+				<!-- Contacts menu  -->
+				<div>
+					<ul class="d-flex m-0 list-unstyled">
+						<li><i class="fas fa-circle-notch"></i></li>
+						<li><i class="fas fa-message"></i></li>
+						<li><i class="fas fa-ellipsis-vertical"></i></li>
+					</ul>
+				</div>
+			</nav>
+			<div class="notifiche">
+				<div> <i class="far fa-bell-slash"></i>Ricevi notifiche di nuovi messaggi<br>
+					<p> <span class="minitext">Attiva notifiche desktop</span></p>
+				</div>
+			</div>
+			<div class="scrolling">
 
 
+				<!-- Search Bar -->
+				<div class="p-1 searchBar">
+					<div class="input-group">
+						<button class="btn btn-light" type="button" id="button-addon1">
+                            <i class="fas fa-search"></i>
+                        </button>
+						<input type="text" class="form-control border border-light"
+                            placeholder="Cerca o inizia una nuova chat">
+					</div>
 
 
+				</div>
 
 
+				<!-- contatti chat li metteremo qui -->
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+			</div>
+		</section>
 
 
 
-        </div>
 
-    </div>
+		<!-- Sezione chat destra -->
+
+		<section class="chatSection">
+			<!-- Navbar in chat   -->
+			<nav>
+				<img id="profilePic" src="" alt="">
+				<div>Michele<br>
+					<p> <span class="minitext">Ultimo accesso oggi alle</span></p>
+				</div>
+				<!-- Chat del menù  -->
+				<div>
+					<ul class="d-flex  list-unstyled">
+						<li><i class="fas fa-search"></i></li>
+						<li><i class="fas fa-paperclip"></i></li>
+						<li><i class="fas fa-ellipsis-vertical"></i></li>
+					</ul>
+				</div>
+			</nav>
+			<!-- Chat messaggiii  -->
+			<div class="chat">
+				<ul class="d-flex px-5 flex-column ">
+					<li class="chatMessaggio sentMessaggio">Qual è il colmo per due divorziati americani?  </li>
+					<li class="chatMessaggio receivedMessaggio">Non saprei..</li>
+                    <li class="chatMessaggio sentMessaggio">Essere… stati uniti. &#128513; </li>
+				</ul>
+			</div>
+			<!-- Chat per masaggiare  -->
+			<footer>
+				<nav class="p-0">
+					<div class="text-center mx-3"> &#128513;</div>
+					<!-- Messaggio  -->
+					<div class="input-group h-100 py-2 flex-grow-1">
+						<input type="text" class="form-control border border-light" placeholder="Invia un messaggio">
+					</div>
+					<!-- Send button -->
+					<div class="text-center mx-3"><i class="fas fa-microphone"></i></div>
+
+				</nav>
+			</footer>
+		</section>
+	</div>
 
 
-    <script src="main.js"></script>
+	<!-- JAVASCRIPT  -->
+	<script src="main.js"></script>
 </body>
 
 </html>

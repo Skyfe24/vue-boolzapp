@@ -3,7 +3,12 @@ Milestone 1
 ● Replica della grafica con la possibilità di avere messaggi scritti dall’utente (verdi) e
 dall’interlocutore (bianco) assegnando due classi CSS diverse
 ● Visualizzazione dinamica della lista contatti: tramite la direttiva v-for, visualizzare
-nome e immagine di ogni contatto
+nome e immagine di ogni contatto (in progress...)
+
+
+
+
+
 Milestone 2
 ● Visualizzazione dinamica dei messaggi: tramite la direttiva v-for, visualizzare tutti i
 messaggi relativi al contatto attivo all’interno del pannello della conversazione
@@ -28,22 +33,3 @@ lista dei contatti
 ● Per gestire le date, può essere utile la libreria Luxon
 
 
-
-
-
-
-                <!-- slider immagine principale-->
-                <div class="gallery">
-                    <ul class="list-group">
-
-
-                        <li v-for="oggetto in todos" class="d-flex align-items-center justify-content-between">
-                            <del v-if="oggetto.done == false"> {{ oggetto.text }}</del>
-                            <div v-else>{{ oggetto.text }} </div> <button type="button" class="btn-close"
-                                @click="deleteTodo(i)"></button>
-                        </li>
-                        <input v-model="nuovecosedafare" type="text" class="form-control"
-                            placeholder="Inserisci qui altre cose da fare">
-                    </ul>
-                    <button class="btn btn-outline-success" type="button" @click="addTodo"> Daje </button>
-                </div>
