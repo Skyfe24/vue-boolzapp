@@ -4,19 +4,20 @@
   box-sizing: border-box;
 }
 body{
-  background: linear-gradient(to bottom, #009688 80%, #dbdbd3 20%);
+  height: 100vh;
+  background: linear-gradient(to bottom, #009688 20%, #dbdbd3 20%);
 }
 
 .background{
   width: 1080px;
   margin: 0 auto;
   text-align: center;
-  background-color: rgb(48, 179, 161);
 }
 .container{
   width: 1080px;
+  height: 90vh;
   margin: 0 auto;
-  background-color: rgb(214, 215, 224);
+  background-color: rgb(255, 255, 255);
   text-align: center;
   color: rgb(0, 0, 0);
 }
