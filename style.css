@@ -58,20 +58,28 @@ ul {
 #app {
   height: 100vh;
 }
-
+.borderino{
+  border: 1px  solid rgb(221, 209, 209);
+}
 section {
   height: 90%;
   margin: auto 0;
 }
-
+.overflowy{
+  overflow-y: scroll;
+}
 .chat {
   height: calc(100% - 140px);
   padding: 8px 0;
   overflow-y: auto;
 }
 
-
-
+.avatar{
+  margin: 10px;
+}
+.columns{
+  flex-direction: column;
+}
 nav {
   height: 70px;
   background-color: #eaeaea;
