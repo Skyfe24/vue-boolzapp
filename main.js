@@ -6,6 +6,7 @@ const { createApp } = Vue;
 const app = createApp({
     data() {
         return {
+            activeIndex: 0,
             user: {
                 name: 'Nome Utente',
                 avatar: '_io'
@@ -207,7 +208,15 @@ const app = createApp({
 
 
     },
+    methods: {
+        
+        // Generate url from data
+        createPicUrl(text) {
+            return `./img/avatar${text}.jpg`;
+        },
 
+        
+    }
 
 },
 )

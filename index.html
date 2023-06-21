@@ -28,8 +28,9 @@
 			<!-- Nav -->
 			<nav>
 				<!-- Profilo  -->
-				<div>
-					<img id="profilePic" src="" alt=""> Nome Utente
+				<div class="d-flex align-items-center">
+					<img :src="createPicUrl(user.avatar)" class="picture" alt="">
+                        <div class="user-info">{{ user.name }}</div>
 				</div>
 				<!-- Contacts menu  -->
 				<div>
@@ -54,7 +55,7 @@
 						<button class="btn btn-light" type="button" id="button-addon1">
                             <i class="fas fa-search"></i>
                         </button>
-						<input type="text" class="form-control border border-light"
+						<input v-model.trim="filtrato" type="text" class="form-control border border-light"
                             placeholder="Cerca o inizia una nuova chat">
 					</div>
 
@@ -62,9 +63,13 @@
 				</div>
 
 
+				
+				<div class="p-1 searchBar"></div>
 				<!-- contatti chat li metteremo qui -->
-
-
+				<ul class="d-flex  list-unstyled">
+					<img v-for="(contact , i) in contacts" class="avatar" v-show="currentIndex === i" :src="contact.avatar" alt="avatar user">
+					
+				</ul>
 			</div>
 		</section>
 
@@ -76,9 +81,12 @@
 		<section class="chatSection">
 			<!-- Navbar in chat   -->
 			<nav>
-				<img id="profilePic" src="" alt="">
-				<div>Michele<br>
-					<p> <span class="minitext">Ultimo accesso oggi alle</span></p>
+				<div class="d-flex align-items-center">
+					<img :src="createPicUrl(contacts[activeIndex].avatar)" class="picture" alt="">
+					<div class="user-info">{{contacts[activeIndex].name}} <br> <span class="minitext">Ultimo accesso oggi alle</span></div> 
+					
+				</div>
+					
 				</div>
 				<!-- Chat del menù  -->
 				<div>
@@ -97,7 +105,7 @@
                     <li class="chatMessaggio sentMessaggio">Essere… stati uniti. &#128513; </li>
 				</ul>
 			</div>
-			<!-- Chat per masaggiare  -->
+			<!-- Chat per messaggiare  -->
 			<footer>
 				<nav class="p-0">
 					<div class="text-center mx-3"> &#128513;</div>
