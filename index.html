@@ -30,7 +30,7 @@
 				<!-- Profilo  -->
 				<div class="d-flex align-items-center">
 					<img :src="createPicUrl(user.avatar)" class="picture" alt="">
-                        <div class="user-info">{{ user.name }}</div>
+					<div class="user-info">{{ user.name }}</div>
 				</div>
 				<!-- Contacts menu  -->
 				<div>
@@ -53,22 +53,27 @@
 				<div class="p-1 searchBar">
 					<div class="input-group">
 						<button class="btn btn-light" type="button" id="button-addon1">
-                            <i class="fas fa-search"></i>
-                        </button>
+							<i class="fas fa-search"></i>
+						</button>
 						<input v-model.trim="filtrato" type="text" class="form-control border border-light"
-                            placeholder="Cerca o inizia una nuova chat">
+							placeholder="Cerca o inizia una nuova chat">
 					</div>
 
 
 				</div>
 
 
-				
-				<div class="p-1 searchBar"></div>
+
+				<div class="p-1 searchBar overflowy"></div>
 				<!-- contatti chat li metteremo qui -->
-				<ul class="d-flex  list-unstyled">
-					<img v-for="(contact , i) in contacts" class="avatar" v-show="currentIndex === i" :src="contact.avatar" alt="avatar user">
-					
+				<ul class="d-flex columns list-unstyled ">
+					<div v-for="person in contacts" class="d-flex borderino  py-2">
+
+						<img :src="createPicUrl(person.avatar)" class="picture" alt="">
+						<div class="px-3">
+							<h6 class="">{{person.name}}</h6>
+						</div>
+					</div>
 				</ul>
 			</div>
 		</section>
@@ -83,41 +88,42 @@
 			<nav>
 				<div class="d-flex align-items-center">
 					<img :src="createPicUrl(contacts[activeIndex].avatar)" class="picture" alt="">
-					<div class="user-info">{{contacts[activeIndex].name}} <br> <span class="minitext">Ultimo accesso oggi alle</span></div> 
-					
-				</div>
-					
-				</div>
-				<!-- Chat del menù  -->
-				<div>
-					<ul class="d-flex  list-unstyled">
-						<li><i class="fas fa-search"></i></li>
-						<li><i class="fas fa-paperclip"></i></li>
-						<li><i class="fas fa-ellipsis-vertical"></i></li>
-					</ul>
-				</div>
-			</nav>
-			<!-- Chat messaggiii  -->
-			<div class="chat">
-				<ul class="d-flex px-5 flex-column ">
-					<li class="chatMessaggio sentMessaggio">Qual è il colmo per due divorziati americani?  </li>
-					<li class="chatMessaggio receivedMessaggio">Non saprei..</li>
-                    <li class="chatMessaggio sentMessaggio">Essere… stati uniti. &#128513; </li>
-				</ul>
-			</div>
-			<!-- Chat per messaggiare  -->
-			<footer>
-				<nav class="p-0">
-					<div class="text-center mx-3"> &#128513;</div>
-					<!-- Messaggio  -->
-					<div class="input-group h-100 py-2 flex-grow-1">
-						<input type="text" class="form-control border border-light" placeholder="Invia un messaggio">
-					</div>
-					<!-- Send button -->
-					<div class="text-center mx-3"><i class="fas fa-microphone"></i></div>
+					<div class="user-info">{{contacts[activeIndex].name}} <br> <span class="minitext">Ultimo accesso
+							oggi alle</span></div>
 
-				</nav>
-			</footer>
+				</div>
+
+	
+		<!-- Chat del menù  -->
+		<div>
+		<ul class="d-flex  list-unstyled">
+			<li><i class="fas fa-search"></i></li>
+			<li><i class="fas fa-paperclip"></i></li>
+			<li><i class="fas fa-ellipsis-vertical"></i></li>
+		</ul>
+		</div>
+		</nav>
+		<!-- Chat messaggiii  -->
+		<div class="chat">
+		<ul class="d-flex px-5 flex-column ">
+			<li class="chatMessaggio sentMessaggio">Qual è il colmo per due divorziati americani? </li>
+			<li class="chatMessaggio receivedMessaggio">Non saprei..</li>
+			<li class="chatMessaggio sentMessaggio">Essere… stati uniti. &#128513; </li>
+		</ul>
+		</div>
+		<!-- Chat per messaggiare  -->
+		<footer>
+		<nav class="p-0">
+			<div class="text-center mx-3"> &#128513;</div>
+			<!-- Messaggio  -->
+			<div class="input-group h-100 py-2 flex-grow-1">
+				<input type="text" class="form-control border border-light" placeholder="Invia un messaggio">
+			</div>
+			<!-- Send button -->
+			<div class="text-center mx-3"><i class="fas fa-microphone"></i></div>
+
+		</nav>
+		</footer>
 		</section>
 	</div>
 

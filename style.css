@@ -22,7 +22,7 @@ body{
 
 .sentMessaggio {
   align-self: flex-end;
-  background-color: #d5f9ba;
+  background-color: #bce49d;
 }
 .receivedMessaggio {
   align-self: flex-start;
@@ -47,7 +47,7 @@ ul {
   cursor: pointer;
 }
 .searchBar {
-  background-color: #fafafa;
+  background-color: #f7f0f0;
 }
 
 .chatSection {
@@ -82,7 +82,7 @@ section {
 }
 nav {
   height: 70px;
-  background-color: #eaeaea;
+  background-color: #eee7e7;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -90,10 +90,10 @@ nav {
 }
 .contactCard {
   height: 70px;
-  border-top: 1px solid #e9ebeb;
+  border-top: 1px solid #e0e4e4;
 }
 .contactCard.selected {
-  background-color: #e9ebeb;
+  background-color: #fbffff;
 }
 img {
   height: 55px;
@@ -115,11 +115,11 @@ i {
   font-size: 1.3rem;
   margin: 0 3px;
   padding: 3px;
-  color: #b1b1b1;
+  color: #cec3c3;
   
 }
 footer i {
-  color: #9da2a3;
+  color: #888f91;
 }
 i:hover {
   color: rgba(31, 29, 29, 0.4);
