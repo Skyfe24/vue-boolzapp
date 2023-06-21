@@ -19,7 +19,12 @@ body{
   padding: 0 15px; 
   line-height: 40px;
 }
-
+.chat {
+  height: calc(100% - 140px);
+  padding: 8px 0;
+  overflow-y: scroll;
+  background-image: url("img/mine.jpg");
+}
 .sentMessaggio {
   align-self: flex-end;
   background-color: #bce49d;
