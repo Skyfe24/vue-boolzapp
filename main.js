@@ -214,10 +214,11 @@ const app = createApp({
         createPicUrl(text) {
             return `./img/avatar${text}.jpg`;
         },
-
+        
+       
         
     }
-
+    
 },
 )
 app.mount("#app");

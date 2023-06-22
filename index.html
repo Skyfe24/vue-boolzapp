@@ -55,7 +55,7 @@
 						<button class="btn btn-light" type="button" id="button-addon1">
 							<i class="fas fa-search"></i>
 						</button>
-						<input v-model.trim="filtrato" type="text" class="form-control border border-light"
+						<input  type="text" class="form-control border border-light"
 							placeholder="Cerca o inizia una nuova chat">
 					</div>
 
@@ -103,11 +103,13 @@
 		</ul>
 		</div>
 		</nav>
-		<!-- Chat messaggiii  -->
+		<!-- Chat messaggi   {{contacts[activeIndex].name}}>
+      {{ array[key]}}-->
 		<div class="chat">
 		<ul class="d-flex px-5 flex-column ">
-			<li class="chatMessaggio sentMessaggio">Qual è il colmo per due divorziati americani? </li>
-			<li class="chatMessaggio receivedMessaggio">Non saprei..</li>
+			<li class="chatMessaggio sentMessaggio">Qual è il colmo per due divorziati americani? </li> 
+			<li class="chatMessaggio receivedMessaggio"  v-for="message in messages"> {{ message.messages }} </li>
+			
 			<li class="chatMessaggio sentMessaggio">Essere… stati uniti. &#128513; </li>
 		</ul>
 		</div>
