@@ -67,8 +67,8 @@
 				<div class="p-1 searchBar overflowy"></div>
 				<!-- contatti chat li metteremo qui -->
 				<ul class="d-flex columns list-unstyled ">
-					<div v-for="(person, i) in contacts" class="d-flex borderino  py-2" :class="{active : currentIndex === i}"
-					@click="setCurrentIndex(i)">
+					<div v-for="(person, i) in contacts" class="d-flex borderino  py-2" :class="{active : activeIndex === i}"
+					@click="setactiveIndex(i)">
 
 						<img :src="createPicUrl(person.avatar)" class="picture" alt="">
 						<div class="px-3">
@@ -124,8 +124,9 @@
 			<div class="text-center mx-3"> &#128513;</div>
 			<!-- Messaggio  -->
 			<div class="input-group h-100 py-2 flex-grow-1">
-				<input type="text" class="form-control border border-light" placeholder="Invia un messaggio">
-			</div>
+				<input v-model.trim="newMessage" type="text" class="form-control border border-light" placeholder="Invia un messaggio" @keyup.enter="sendMessage">
+				<button class="btn btn-outline-success" type="button" @click="sendMessage()"> Invia </button>
+			</div>  
 			<!-- Send button -->
 			<div class="text-center mx-3"><i class="fas fa-microphone"></i></div>
 

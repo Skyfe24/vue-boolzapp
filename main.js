@@ -7,6 +7,9 @@ const app = createApp({
     data() {
         return {
             activeIndex: 0,
+            newMessage: '',
+            searchContact: '',
+            currentId: 1,
             user: {
                 name: 'Nome Utente',
                 avatar: '_io'
@@ -208,19 +211,82 @@ const app = createApp({
 
 
     },
+    computed: {
+        
+      // Take current contact by ID
+      currentContact(){
+        return this.contacts.find(contact => contact.id === this.currentId);
+      },
+
+      // Take current chat by current contact
+      currentChat(){
+        return this.currentContact.messages;
+      },
+      // Get the highest id of the contact's chat and return the next one
+      newMessageId() {
+
+        let highestId = 0;
+        this.currentContact.messages.forEach((message) => {
+          if(message.id > highestId) highestId = message.id;
+          })
+
+        let newId = 0;
+        newId = ++highestId;
+        console.log(newId);
+        return newId;
+      },
+    },
+
+        
     methods: {
         
         // Generate url from data
         createPicUrl(text) {
             return `./img/avatar${text}.jpg`;
         },
-        setCurrentIndex(targetIndex){
-            this.currentIndex = targetIndex
-        }
-       
+        setactiveIndex(targetIndex){
+            this.activeIndex = targetIndex;
+        },
         
-    }
-    
-},
-)
+        // Add newMessage into the contact messages
+        sendMessage() {
+
+            let newMessage = 
+            { 
+              id: this.newMessageId,
+              message: this.newMessage,
+              status: 'sent',
+            };
+            this.currentContact.messages.push(newMessage);
+            this.newMessage = '';
+  
+  
+  
+            // His Reply
+  
+            setTimeout(() => {
+  
+            newMessage = 
+            { 
+              id: this.newMessageId,
+              message: 'ok',
+              status: 'received',
+            };
+  
+            this.currentContact.messages.push(newMessage);
+            this.newMessage = '';
+            } , 1000)
+          },
+  
+          
+  
+          // Set currend Id
+          setCurrentId(id) {
+            this.currentId = id;
+          }
+          
+      }
+  
+  });
+  
 app.mount("#app");
