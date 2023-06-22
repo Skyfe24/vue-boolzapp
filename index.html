@@ -111,9 +111,9 @@
 		</ul>>-->
 		<div class="chat">
 			<ul id=“chat-area”>
-				<li class="chatMessaggio receivedMessaggio" v-for=“message in contacts[activeIndex].messages” :class=“{ sent: message.status === `sent`, received: message.status === `received` }“>
-				  {{ message.message }}
-				</li>
+				<li class=“chatMessaggio receivedMessaggio” v-for=“message in contacts[activeIndex].messages” :class=“{ sent: message.status = ”sent”, received: message.status = ”received” }“>
+					{{ message.message }}
+				  </li>
 			  </ul>
 		</div>
 		<!-- Chat per messaggiare  -->
