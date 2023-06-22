@@ -214,7 +214,9 @@ const app = createApp({
         createPicUrl(text) {
             return `./img/avatar${text}.jpg`;
         },
-        
+        setCurrentIndex(targetIndex){
+            this.currentIndex = targetIndex
+        }
        
         
     }
