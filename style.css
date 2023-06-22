@@ -14,7 +14,6 @@ body{
 }
 .chatMessaggio {
   margin: 4px 0;
-  min-width: 100px;
   border-radius: 8px;
   padding: 0 15px; 
   line-height: 40px;
@@ -28,10 +27,16 @@ body{
 .sentMessaggio {
   align-self: flex-end;
   background-color: #bce49d;
+  margin-left: 10px;
+  padding: 5px;
+  margin-top: 5px;
 }
 .receivedMessaggio {
   align-self: flex-start;
   background-color: #fff;
+  margin-left: 10px;
+  padding: 5px;
+  margin-top: 5px;
 }
 
 .contacts {
