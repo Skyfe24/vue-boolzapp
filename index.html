@@ -103,15 +103,18 @@
 		</ul>
 		</div>
 		</nav>
-		<!-- Chat messaggi   {{contacts[activeIndex].name}}>
-      {{ array[key]}}-->
-		<div class="chat">
-		<ul class="d-flex px-5 flex-column ">
+		<!-- Chat messaggi         -   <ul class="d-flex px-5 flex-column ">
 			<li class="chatMessaggio sentMessaggio">Qual è il colmo per due divorziati americani? </li> 
-			<li class="chatMessaggio receivedMessaggio"  v-for="oggetto in messages"> {{ oggetto.messages }} </li>
+			<li class="chatMessaggio receivedMessaggio" v-for="oggetto in messages"> {{ oggetto.messages }}   </li>
 			
 			<li class="chatMessaggio sentMessaggio">Essere… stati uniti. &#128513; </li>
-		</ul>
+		</ul>>-->
+		<div class="chat">
+			<ul id=“chat-area”>
+				<li class="chatMessaggio receivedMessaggio" v-for=“message in contacts[activeIndex].messages” :class=“{ sent: message.status === `sent`, received: message.status === `received` }“>
+				  {{ message.message }}
+				</li>
+			  </ul>
 		</div>
 		<!-- Chat per messaggiare  -->
 		<footer>
