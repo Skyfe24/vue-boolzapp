@@ -209,11 +209,18 @@ const app = createApp({
     };
   },
   computed: {
-    // Take current contact by ID
+    filteredContacts() {
+        const searchedWord = this.searchValue.toLowerCase();
+        
+        return this.contacts.filter((contact) => {
+          return contact.name.toLowerCase().includes(searchedWord);
+        })
+      },
+    
     currentContact() {
-      return this.contacts.find((contact) => contact.id === this.currentId);
-    },
-
+        const filteredContacts = this.filteredContacts();
+        return filteredContacts[this.activeIndex];
+      },
     // Take current chat by current contact
     currentChat() {
       return this.currentContact.messages;
@@ -232,16 +239,11 @@ const app = createApp({
     },
 
     
-    filteredContacts() {
-        const searchedWord = this.searchValue.toLowerCase();
-        
-        return this.contacts.filter((contact) => {
-          return contact.name.toLowerCase().includes(searchedWord);
-        })
-      },
+    
   },
 
   methods: {
+    
     // Generate url from data
     createPicUrl(text) {
       return `./img/avatar${text}.jpg`;

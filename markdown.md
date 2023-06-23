@@ -36,3 +36,7 @@ lista dei contatti
 ● Per gestire le date, può essere utile la libreria Luxon
 
 
+// Take current contact by ID
+    //currentContact() {
+    //  return this.contacts.find((contact) => contact.id === this.currentId);
+    //},

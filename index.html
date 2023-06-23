@@ -67,7 +67,7 @@
 				<div class="p-1 searchBar overflowy"></div>
 				<!-- contatti chat li metteremo qui -->
 				<ul class="d-flex columns list-unstyled ">
-					<div v-for="(person, i) in contacts" class="d-flex borderino  py-2" :class="{active : activeIndex === i}"
+					<div v-for="(person, i) in filteredContacts" class="d-flex borderino  py-2" :class="{active : activeIndex === i}"
 					@click="setactiveIndex(i)">
 
 						<img :src="createPicUrl(person.avatar)" class="picture" alt="">
