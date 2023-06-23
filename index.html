@@ -111,10 +111,10 @@
 			<li class="chatMessaggio sentMessaggio">Essere… stati uniti. &#128513; </li>
 		</ul>>-->
 		<div class="chat">
-			<ul id="chat-area">
-				<li class="d-flex " v-for="message in contacts[activeIndex].messages" :class=" { 'sent': message.status === 'sent', 'received': message.status === 'received' }">
-					<div v-if="message.status === 'sent'"> <span class="chatMessaggio sentMessaggio">  {{ message.message }}           </span>  </div>
-					<div v-if="message.status === 'received'"> <span class="chatMessaggio receivedMessaggio">     {{ message.message }}    </span>  </div>	
+			<ul id="chat-area ">
+				<li class="d-flex flex-column" v-for="message in contacts[activeIndex].messages" :class=" { 'sent': message.status === 'sent', 'received': message.status === 'received' }">
+					<div v-if="message.status === 'sent'"> <span class="chatMessaggio sentMessaggio ">  {{ message.message }}           </span>  </div>
+					<div v-if="message.status === 'received'"> <span class="chatMessaggio receivedMessaggio ">     {{ message.message }}    </span>  </div>	
 				</li>
 			  </ul>
 		</div>

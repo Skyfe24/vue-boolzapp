@@ -211,14 +211,12 @@ const app = createApp({
   computed: {
     filteredContacts() {
         const searchedWord = this.searchValue.toLowerCase();
-        
         return this.contacts.filter((contact) => {
           return contact.name.toLowerCase().includes(searchedWord);
-        })
+        });
       },
-    
-    currentContact() {
-        const filteredContacts = this.filteredContacts();
+      currentContact() {
+        const filteredContacts = this.filteredContacts;
         return filteredContacts[this.activeIndex];
       },
     // Take current chat by current contact

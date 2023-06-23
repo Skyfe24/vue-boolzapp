@@ -13,30 +13,36 @@ body{
   font-size: smaller;
 }
 .chatMessaggio {
-  margin: 4px 0;
   border-radius: 8px;
-  padding: 0 15px; 
-  line-height: 40px;
+  padding: 0 20px; 
+  line-height: 55px;
+  margin-top:  20px;;
+  min-width: 80px;
 }
 .chat {
   height: calc(100% - 140px);
   padding: 8px 0;
   overflow-y: scroll;
   background-image: url("img/mine.jpg");
+  position: relative;
 }
 .sentMessaggio {
   align-self: flex-end;
-  background-color: #bce49d;
+  background-color: #c9fca2;
   margin-left: 10px;
-  padding: 5px;
-  margin-top: 5px;
+  padding-bottom: 18px;
+  padding-top: 5px;
+  margin-top: 20px;
+  position: relative;
+  right: 0px;
 }
 .receivedMessaggio {
   align-self: flex-start;
   background-color: #fff;
   margin-left: 10px;
-  padding: 5px;
-  margin-top: 5px;
+  padding-bottom: 18px;
+  padding-top: 5px;
+  margin-top: 20px;
 }
 
 .contacts {
@@ -70,6 +76,7 @@ ul {
 }
 .borderino{
   border: 1px  solid rgb(221, 209, 209);
+  cursor: pointer;
 }
 section {
   height: 90%;
@@ -135,4 +142,6 @@ i:hover {
   color: rgba(31, 29, 29, 0.4);
 }
 
-
+.gap-5{
+  display: flex;
+}
