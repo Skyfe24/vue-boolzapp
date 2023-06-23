@@ -3,7 +3,9 @@
   margin: 0;
   box-sizing: border-box;
 }
-
+.container {
+  display: flex;
+}
 body{
   height: 100vh;
   background: linear-gradient(to bottom, #009688 20%, #dbdbd3 20%);
