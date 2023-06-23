@@ -10,7 +10,11 @@ body{
   height: 100vh;
   background: linear-gradient(to bottom, #009688 20%, #dbdbd3 20%);
 }
-
+.message-list{
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+}
 .minitext{
   font-size: smaller;
 }
