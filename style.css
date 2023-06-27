@@ -18,6 +18,7 @@ body{
 .minitext{
   font-size: smaller;
 }
+
 .chatMessaggio {
   border-radius: 8px;
   padding: 0 20px; 
@@ -33,7 +34,6 @@ body{
   position: relative;
 }
 .sentMessaggio {
-  align-self: flex-end;
   background-color: #c9fca2;
   margin-left: 10px;
   padding-bottom: 18px;
@@ -41,8 +41,10 @@ body{
   margin-top: 20px;
   
 }
+.flex-end{
+  align-self: flex-end;
+}
 .receivedMessaggio {
-  align-self: flex-start;
   background-color: #fff;
   margin-left: 10px;
   padding-bottom: 18px;
@@ -149,4 +151,8 @@ i:hover {
 
 .gap-5{
   display: flex;
+}
+.btn-close{
+font-size: smaller;
+
 }

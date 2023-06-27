@@ -214,6 +214,12 @@ const app = createApp({
         return this.contacts.filter((contact) => {
           return contact.name.toLowerCase().includes(searchedWord);
         });
+        
+
+
+       //  return this.contacts.filter((contact) => {
+        //  return contact.name.toLowerCase().includes(searchedWord);
+       // });
       },
       currentContact() {
         const filteredContacts = this.filteredContacts;
@@ -278,6 +284,10 @@ const app = createApp({
     setCurrentId(id) {
       this.currentId = id;
     },
+    deleteMsg(targetIndex) {
+      this.comments.splice(targetIndex, 1);
+    },
+    
   },
 });
 
